@@ -1,0 +1,9 @@
+title: Functional Programming in Python
+language: English
+summary: |-
+  Functional Programming in Python
+  Created: Sep 2021
+programming_language: Python
+environment: unittest
+content:
+- lesson1
