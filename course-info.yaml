@@ -6,4 +6,5 @@ summary: |-
 programming_language: Python
 environment: unittest
 content:
-- lesson1
+- MapReduce
+- InternalFunctions
