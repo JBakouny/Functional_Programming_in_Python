@@ -2,7 +2,14 @@ import unittest
 
 from task import *
 
-# todo: replace this with an actual test
+
+def equals(x, y):
+    return abs((y - x) / x) < 0.001
+
+
 class TestCase(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(1, 1, msg="True Test")
+    def test_sqrtFloatImprecision(self):
+        self.assertEqual(sqrt(9), 3, msg="Floating-point imprecision")
+
+    def test_sqrtCorrect(self):
+        self.assertTrue(equals(sqrt(9), 3))
