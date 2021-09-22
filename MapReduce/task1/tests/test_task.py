@@ -9,7 +9,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(sumInts(5, 10), 45)
 
     def test_performance_sumInts(self):
-        self.assertEqual(sumInts(5, 100000), 705082694)
+        self.assertEqual(50004990, sumInts(5, 10000))
 
     def test_sumCube(self):
         self.assertEqual(sumCube(5, 10), 2925)

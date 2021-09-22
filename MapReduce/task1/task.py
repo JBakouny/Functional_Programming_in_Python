@@ -1,9 +1,9 @@
 
 def mapReduce(zero, reducer, mapper, a, b) :
-    if a > b :
-        return zero
-    else :
-        return mapReduce(reducer(mapper(a), zero), reducer, mapper, a + 1, b)
+    res = zero
+    for i in range(a, b + 1) :
+        res = reducer(res, mapper(i))
+    return res
 
 def product (f, a, b) :
     return mapReduce(1, lambda x, y : x * y, f, a, b)
