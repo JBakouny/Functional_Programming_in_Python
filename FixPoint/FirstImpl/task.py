@@ -3,10 +3,15 @@ def fixPoint(f):
     def isCloseEnough(x, y, precision=0.0000000000000000001):
         return abs((x - y) / x) < precision
 
-    def iterate(guess):
-        next = f(guess)
-        while not isCloseEnough(guess, next) :
-            next = f(next)
-        return next
+    next = f(1.0)
+    while not isCloseEnough(f(next), next) :
+        next = f(next)
+    return next
 
-    return iterate(1.0)
+def averageDamp(f):
+    def res(x) :
+        return (x + f(x)) / 2
+    return res
+
+def sqrt(x) :
+    return fixPoint(averageDamp(lambda y : x / y))

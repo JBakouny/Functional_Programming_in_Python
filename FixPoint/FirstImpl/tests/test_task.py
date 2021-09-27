@@ -1,6 +1,6 @@
 import unittest
 
-from task import fixPoint
+from task import *
 
 
 def isEqual(x, y, precision=0.0000000000000000001):
@@ -9,3 +9,6 @@ def isEqual(x, y, precision=0.0000000000000000001):
 class TestCase(unittest.TestCase):
     def test_FixPoint(self):
         self.assertTrue(isEqual(fixPoint(lambda x: 1 + x / 2), 2))
+
+    def test_Sqrt9(self):
+        self.assertTrue(isEqual(sqrt(9), 3))
