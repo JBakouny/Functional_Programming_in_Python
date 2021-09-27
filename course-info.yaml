@@ -8,3 +8,4 @@ environment: unittest
 content:
 - MapReduce
 - InternalFunctions
+- FixPoint
